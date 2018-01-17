@@ -1,4 +1,3 @@
-set version=5
 "This will get the sunrise and sunset times of a specific location. To be able
 "to determine $l you need to first go to http://weather.yahoo.com/ and look up
 "your location. The last numbers in the URL will be the $l
