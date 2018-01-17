@@ -1,4 +1,4 @@
-
+set version=5
 "This will get the sunrise and sunset times of a specific location. To be able
 "to determine $l you need to first go to http://weather.yahoo.com/ and look up
 "your location. The last numbers in the URL will be the $l
@@ -30,8 +30,9 @@ function! GetSun()
 			let [m,h0,m0,ap0,h1,m1,ap1;rest] = matches
 			if ap0 == 'p' | let h0 = h0 + 12 | endif
 			if ap1 == 'p' | let h1 = h1 + 12 | endif
-			let s:sun = h0 . ":" . m0 . "->" . h1 . ":" . m1
+			let s:sun = printf("%d:%02d->%d:%02d",h0,m0,h1,m1)
 		endif
 	endif
 	return s:sun
 endfunction
+"true
